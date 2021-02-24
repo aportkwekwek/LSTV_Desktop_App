@@ -7,13 +7,27 @@ using System.Threading.Tasks;
 
 namespace LSTV_Desktop_App
 {
-    class UserClass
+    public static class UserClass
     {
 
-        public string xusername { get; set; }
-        public string xfullname { get; set; }
+        private static string xusername;
+        private static string xfullname;
 
+        public static void setUsername(string value) {
+            xusername = value;
+        }
 
+        public static string getUsername() {
+            return xusername;
+        }
+
+        public static void setFullname(string value) {
+            xfullname = value;
+        }
+
+        public static string getFullname() {
+            return xfullname;
+        }
 
     }
 }

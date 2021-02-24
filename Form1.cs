@@ -94,10 +94,8 @@ namespace LSTV_Desktop_App
 
                 }
                 else {
-
-                    UserClass user = new UserClass();
-                    user.xusername = dt.Rows[0][0].ToString();
-                    user.xfullname = dt.Rows[0][2].ToString();
+                    UserClass.setUsername(dt.Rows[0][0].ToString());
+                    UserClass.setFullname(dt.Rows[0][2].ToString());
 
 
                     clearText();

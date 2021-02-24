@@ -196,5 +196,13 @@ namespace LSTV_Desktop_App
         {
             showLinq();
         }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frm_Login xfrm_login = new frm_Login();
+            xfrm_login.Show();
+
+        }
     }
 }

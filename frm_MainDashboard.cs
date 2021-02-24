@@ -19,7 +19,8 @@ namespace LSTV_Desktop_App
 
         private void frm_MainDashboard_Load(object sender, EventArgs e)
         {
-
+            this.lbl_username.Text = UserClass.getUsername();
+            this.lbl_fullname.Text = UserClass.getFullname();
         }
     }
 }

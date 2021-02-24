@@ -67,7 +67,7 @@ namespace LSTV_Desktop_App
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.ShadowDecoration.Parent = this.pnlSidebar;
-            this.pnlSidebar.Size = new System.Drawing.Size(198, 592);
+            this.pnlSidebar.Size = new System.Drawing.Size(198, 619);
             this.pnlSidebar.TabIndex = 0;
             // 
             // guna2Button5
@@ -80,12 +80,13 @@ namespace LSTV_Desktop_App
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
             this.guna2Button5.HoverState.Parent = this.guna2Button5;
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.Location = new System.Drawing.Point(0, 541);
+            this.guna2Button5.Location = new System.Drawing.Point(0, 568);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(198, 51);
             this.guna2Button5.TabIndex = 6;
             this.guna2Button5.Text = "Logout";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Panel1
             // 
@@ -120,17 +121,17 @@ namespace LSTV_Desktop_App
             this.guna2Panel2.Location = new System.Drawing.Point(198, 0);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(802, 51);
+            this.guna2Panel2.Size = new System.Drawing.Size(935, 51);
             this.guna2Panel2.TabIndex = 1;
             // 
             // pnl_footer
             // 
             this.pnl_footer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.pnl_footer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_footer.Location = new System.Drawing.Point(198, 528);
+            this.pnl_footer.Location = new System.Drawing.Point(198, 581);
             this.pnl_footer.Name = "pnl_footer";
             this.pnl_footer.ShadowDecoration.Parent = this.pnl_footer;
-            this.pnl_footer.Size = new System.Drawing.Size(802, 64);
+            this.pnl_footer.Size = new System.Drawing.Size(935, 38);
             this.pnl_footer.TabIndex = 2;
             // 
             // pnl_indicator
@@ -138,7 +139,7 @@ namespace LSTV_Desktop_App
             this.pnl_indicator.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_indicator.Location = new System.Drawing.Point(198, 51);
             this.pnl_indicator.Name = "pnl_indicator";
-            this.pnl_indicator.Size = new System.Drawing.Size(802, 477);
+            this.pnl_indicator.Size = new System.Drawing.Size(935, 530);
             this.pnl_indicator.TabIndex = 1;
             // 
             // btn_MinimizeForm
@@ -152,7 +153,7 @@ namespace LSTV_Desktop_App
             this.btn_MinimizeForm.ImageRotate = 0F;
             this.btn_MinimizeForm.ImageSize = new System.Drawing.Size(15, 15);
             this.btn_MinimizeForm.IndicateFocus = true;
-            this.btn_MinimizeForm.Location = new System.Drawing.Point(658, 0);
+            this.btn_MinimizeForm.Location = new System.Drawing.Point(791, 0);
             this.btn_MinimizeForm.Name = "btn_MinimizeForm";
             this.btn_MinimizeForm.PressedState.ImageSize = new System.Drawing.Size(0, 0);
             this.btn_MinimizeForm.PressedState.Parent = this.btn_MinimizeForm;
@@ -173,7 +174,7 @@ namespace LSTV_Desktop_App
             this.btn_MaximizeForm.ImageRotate = 0F;
             this.btn_MaximizeForm.ImageSize = new System.Drawing.Size(15, 15);
             this.btn_MaximizeForm.IndicateFocus = true;
-            this.btn_MaximizeForm.Location = new System.Drawing.Point(706, 0);
+            this.btn_MaximizeForm.Location = new System.Drawing.Point(839, 0);
             this.btn_MaximizeForm.Name = "btn_MaximizeForm";
             this.btn_MaximizeForm.PressedState.ImageSize = new System.Drawing.Size(0, 0);
             this.btn_MaximizeForm.PressedState.Parent = this.btn_MaximizeForm;
@@ -194,7 +195,7 @@ namespace LSTV_Desktop_App
             this.btn_CloseForm.ImageRotate = 0F;
             this.btn_CloseForm.ImageSize = new System.Drawing.Size(15, 15);
             this.btn_CloseForm.IndicateFocus = true;
-            this.btn_CloseForm.Location = new System.Drawing.Point(754, 0);
+            this.btn_CloseForm.Location = new System.Drawing.Point(887, 0);
             this.btn_CloseForm.Name = "btn_CloseForm";
             this.btn_CloseForm.PressedState.ImageSize = new System.Drawing.Size(0, 0);
             this.btn_CloseForm.PressedState.Parent = this.btn_CloseForm;
@@ -315,7 +316,7 @@ namespace LSTV_Desktop_App
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 592);
+            this.ClientSize = new System.Drawing.Size(1133, 619);
             this.Controls.Add(this.pnl_indicator);
             this.Controls.Add(this.pnl_footer);
             this.Controls.Add(this.guna2Panel2);

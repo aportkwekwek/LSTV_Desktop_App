@@ -91,20 +91,39 @@ namespace LSTV_Desktop_App
             txt_generatePyramid.Clear();
 
             string xpyramid = txt_Pyramid.Text;
-            int n = Int32.Parse(xpyramid);
-            string newline = Environment.NewLine;
 
-            for (var i = 1; i < n; i++) {
-                for (var j = 1; j <= i; j++) { 
-                }
-                for (var k = i; k <= n; k++) {
-                    txt_generatePyramid.AppendText(k + "\t");
-                }
-
-                txt_generatePyramid.AppendText(newline);
+            if (xpyramid == "") {
+                MessageBox.Show("Please enter a number","System Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txt_Pyramid.Focus();
+                return;
             }
 
-            txt_generatePyramid.AppendText(n.ToString());
+            try
+            {
+                int n = Int32.Parse(xpyramid);
+                string newline = Environment.NewLine;
+
+                for (var i = 1; i < n; i++)
+                {
+                    for (var j = 1; j <= i; j++)
+                    {
+                    }
+                    for (var k = i; k <= n; k++)
+                    {
+                        txt_generatePyramid.AppendText(k + "\t");
+                    }
+
+                    txt_generatePyramid.AppendText(newline);
+                }
+
+                txt_generatePyramid.AppendText(n.ToString());
+            }
+            catch {
+
+                MessageBox.Show("Unable to parse string to number");
+                return;
+            
+            }
 
         }
     }
