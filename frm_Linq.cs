@@ -86,23 +86,17 @@ namespace LSTV_Desktop_App
 
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void tmr_progress_Tick(object sender, EventArgs e)
         {
             if (this.dgv_Names != null) {
-                for (var i = 0; i <= dgv_Names.Rows.Count; i++) {
-                    prbar_loader.Value = prbar_loader.Value / this.dgv_Names.Rows.Count;
-
-                }
+                
             }
         }
 
         private void btn_CreateNewEmployee_Click(object sender, EventArgs e)
         {
+          
+
             string xemployeeCode = txt_EmployeeCode.Text;
             string xemployeeFullname = txt_Fullname.Text;
             this.dtp_BirthDate.Format = DateTimePickerFormat.Custom;
@@ -110,19 +104,25 @@ namespace LSTV_Desktop_App
             string xemployeeBirthday = dtp_BirthDate.Text;
             string xemployeeStatus = "";
 
-            if (cmb_Gender.SelectedItem == null) {
-                MessageBox.Show("Gender Not Selected","System Message", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                return;
-            }
-
-            string xemployeeGender = cmb_Gender.SelectedItem.ToString();
-            string xemployeeSalary = txt_Salary.Text;
-
-
+        
             if (xemployeeFullname == "")
             {
                 MessageBox.Show("Please enter employee fullname", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txt_Fullname.Focus();
+                return;
+            }
+
+            if (cmb_Gender.SelectedItem == null)
+            {
+                MessageBox.Show("Gender Not Selected", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                return;
+            }
+
+            string xemployeeGender = cmb_Gender.SelectedItem.ToString();
+
+            string xemployeeSalary = txt_Salary.Text;
+            if (xemployeeSalary == "") {
+                MessageBox.Show("Please give money to your employee", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 return;
             }
 
@@ -155,44 +155,54 @@ namespace LSTV_Desktop_App
                 xemployeeStatus = "Widowed";
             }
 
-            MySqlConnection xsqlcon = new MySqlConnection(xsqlconnstring);
-            xsqlcon.Open();
-
-            //check first if the same employee name exists in the database;
-            string xquery_checkifExists = "Select * from employeefile where empname = @empname";
-            MySqlCommand xsqlcmd = new MySqlCommand(xquery_checkifExists, xsqlcon);
-            xsqlcmd.Parameters.AddWithValue("@empname", xemployeeFullname);
-            MySqlDataAdapter xsqlda = new MySqlDataAdapter();
-            xsqlda.SelectCommand = xsqlcmd;
-            DataTable dt = new DataTable();
-            xsqlda.Fill(dt);
-
-            if (dt.Rows.Count <= 0)
+            DialogResult xdialogresult = MessageBox.Show("Are you sure you want to Create new employee?", "System Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            
+            if (xdialogresult == DialogResult.Yes)
             {
-                string xquery_insert = "Insert into employeefile(empcode, empname,birthdate,status,gender,salary) values (@empcode, @empname, @birthdate, @status,@gender,@salary)";
-                MySqlCommand xsqlcmd_insert = new MySqlCommand(xquery_insert, xsqlcon);
-                xsqlcmd_insert.Parameters.AddWithValue("@empcode", xemployeeCode);
-                xsqlcmd_insert.Parameters.AddWithValue("@empname", xemployeeFullname);
-                xsqlcmd_insert.Parameters.AddWithValue("@birthdate", xemployeeBirthday);
-                xsqlcmd_insert.Parameters.AddWithValue("@status", xemployeeStatus);
-                xsqlcmd_insert.Parameters.AddWithValue("@gender", xemployeeGender);
-                xsqlcmd_insert.Parameters.AddWithValue("@salary", xemployeeSalary);
-                xsqlcmd_insert.ExecuteNonQuery();
+                MySqlConnection xsqlcon = new MySqlConnection(xsqlconnstring);
+                xsqlcon.Open();
 
-                xsqlcon.Close();
-                MessageBox.Show("Successfully Added New Employee", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //check first if the same employee name exists in the database;
+                string xquery_checkifExists = "Select * from employeefile where empname = @empname";
+                MySqlCommand xsqlcmd = new MySqlCommand(xquery_checkifExists, xsqlcon);
+                xsqlcmd.Parameters.AddWithValue("@empname", xemployeeFullname);
+                MySqlDataAdapter xsqlda = new MySqlDataAdapter();
+                xsqlda.SelectCommand = xsqlcmd;
+                DataTable dt = new DataTable();
+                xsqlda.Fill(dt);
 
-                this.Controls.Clear();
-                this.InitializeComponent();
-                loadingData();
-                getLastDataFromDb();
+                if (dt.Rows.Count <= 0)
+                {
+                    string xquery_insert = "Insert into employeefile(empcode, empname,birthdate,status,gender,salary) values (@empcode, @empname, @birthdate, @status,@gender,@salary)";
+                    MySqlCommand xsqlcmd_insert = new MySqlCommand(xquery_insert, xsqlcon);
+                    xsqlcmd_insert.Parameters.AddWithValue("@empcode", xemployeeCode);
+                    xsqlcmd_insert.Parameters.AddWithValue("@empname", xemployeeFullname);
+                    xsqlcmd_insert.Parameters.AddWithValue("@birthdate", xemployeeBirthday);
+                    xsqlcmd_insert.Parameters.AddWithValue("@status", xemployeeStatus);
+                    xsqlcmd_insert.Parameters.AddWithValue("@gender", xemployeeGender);
+                    xsqlcmd_insert.Parameters.AddWithValue("@salary", xemployeeSalary);
+                    xsqlcmd_insert.ExecuteNonQuery();
+
+                    xsqlcon.Close();
+                    MessageBox.Show("Successfully Added New Employee", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Controls.Clear();
+                    this.InitializeComponent();
+                    loadingData();
+                    getLastDataFromDb();
+                }
+                else
+                {
+                    MessageBox.Show("Same employee detected in the database", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    xsqlcon.Close();
+                }
             }
             else
             {
-                MessageBox.Show("Same employee detected in the database", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                xsqlcon.Close();
+                MessageBox.Show("Nothing happened!", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+
         }
 
         private void getLastDataFromDb() {
@@ -272,9 +282,38 @@ namespace LSTV_Desktop_App
            
         }
 
-        private void frm_Linq_Enter(object sender, EventArgs e)
+        private void txtSearchEmployee_KeyPress(object sender, KeyPressEventArgs e)
         {
-            loadingData();
+            if (txtSearchEmployee.Text.Length > 2) {
+                try
+                {
+
+                    DataTable xdt = new DataTable();
+                    
+                    string xsearchEmployee = txtSearchEmployee.Text;
+                    MySqlConnection xsqlconn = new MySqlConnection(xsqlconnstring);
+                    xsqlconn.Open();
+
+                    string xsqlQuery = "Select recid as `Record ID`, empcode as `Employee Code`, empname as `Employee Name` , birthdate as `Birth Date`, status as `Status` , gender as `Gender` , salary as `Salary` from employeefile where (empcode like '%" +xsearchEmployee + "%') or (empname like '%"+ xsearchEmployee +"%') or (status like '%"+ xsearchEmployee +"%') or (gender like '%"+ xsearchEmployee +"%') or (salary like '%"+ xsearchEmployee  +"%')";
+                    MySqlCommand xsqlcmd = new MySqlCommand(xsqlQuery, xsqlconn);
+                    //xsqlcmd.Parameters.AddWithValue("@search", xsearchEmployee);
+                    MySqlDataAdapter xsqlda = new MySqlDataAdapter();
+                    xsqlda.SelectCommand = xsqlcmd;
+                    xsqlda.Fill(xdt);
+
+                    dgv_Names.DataSource = xdt;
+
+                    dgv_Names.Columns["Birth Date"].DefaultCellStyle.Format = "MMMM/dd/yyyy";
+                    dgv_Names.Columns["Salary"].DefaultCellStyle.Format = "N2";
+                    dgv_Names.Columns["Salary"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+                    xsqlconn.Close();
+                }
+                catch (Exception ex){
+                    MessageBox.Show(ex.ToString());
+                    return;
+                }
+            }
         }
     }
 }

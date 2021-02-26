@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using CryptSharp;
+using System.Diagnostics;
 
 namespace LSTV_Desktop_App
 {
@@ -17,7 +18,6 @@ namespace LSTV_Desktop_App
     {
 
         protected string xsqlconnstring = "datasource=localhost;username=root;password= ;database=lstventuressqlexam";
-        
         public frm_Login()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace LSTV_Desktop_App
 
         private void frm_Login_Load(object sender, EventArgs e)
         {
-
+            this.Focus();
         }
 
         private void clearText() {
@@ -56,13 +56,13 @@ namespace LSTV_Desktop_App
             string xpassword = txt_password.Text;
 
             if (xusername == "") {
-                MessageBox.Show("Username cannot be blank!", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Username cannot be blank!", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txt_username.Focus();
                 return;
             }
 
             if (xpassword == "") {
-                MessageBox.Show("Password cannot be blank!", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show("Password cannot be blank!", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 txt_password.Focus();
                 return;
 
@@ -78,7 +78,6 @@ namespace LSTV_Desktop_App
             DataTable dt = new DataTable();
             xsqlda.Fill(dt);
             
-
 
             if (dt.Rows.Count <= 0)
             {
@@ -112,5 +111,30 @@ namespace LSTV_Desktop_App
 
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo xstartinfo = new ProcessStartInfo("https://www.lstventures.com");
+            Process.Start(xstartinfo);
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_CloseForm_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -21,41 +21,6 @@ namespace LSTV_Desktop_App
             InitializeComponent();
         }
 
-        private void dialog_editEmployee_Load(object sender, EventArgs e)
-        {
-            txt_editEmployeeCode.Text =  Employee.getEmployeeCode();
-            txt_editEmployeeFullname.Text = Employee.getEmployeeFullName();
-            dtp_editEmployeeBdate.Format = DateTimePickerFormat.Custom;
-            dtp_editEmployeeBdate.CustomFormat = "MM/dd/yyyy";
-            dtp_editEmployeeBdate.Text =  Employee.getEmployeeBday();
-            string status = Employee.getEmployeeStatus();
-            //Employee.getEmployeeGender();
-            txt_editEmployeeSalary.Text = Employee.getEmployeeSalary();
-
-            if (status == "Single")
-            {
-                rdo_Single.Checked = true;
-            }
-            else if (status == "Married")
-            {
-                rdo_Married.Checked = true;
-            }
-            else if (status == "Divorced")
-            {
-                rdo_Divorced.Checked = true;
-            }
-            else if (status == "Separated")
-            {
-                rdo_Separated.Checked = true;
-            }
-            else if (status == "Widowed")
-            {
-                rdo_Widowed.Checked = true;
-            }
-
-
-        }
-
         private void btn_back_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -146,8 +111,32 @@ namespace LSTV_Desktop_App
             }
         }
 
-        private void dialog_editEmployee_FormClosed(object sender, FormClosedEventArgs e)
+        private void dialog_editEmployee_Load(object sender, EventArgs e)
         {
+            txt_editEmployeeCode.Text = Employee.getEmployeeCode();
+            txt_editEmployeeFullname.Text = Employee.getEmployeeFullName();
+            txt_editEmployeeSalary.Text = Employee.getEmployeeSalary();
+            dtp_editEmployeeBdate.Text = Employee.getEmployeeBday();
+            string xemployee_status = Employee.getEmployeeStatus();
+
+            if (xemployee_status == "Single")
+            {
+                rdo_Single.Checked = true;
+            }
+            else if (xemployee_status == "Married")
+            {
+                rdo_Married.Checked = true;
+            }
+            else if (xemployee_status == "Divorced")
+            {
+                rdo_Divorced.Checked = true;
+            }
+            else if (xemployee_status == "Separated") {
+                rdo_Separated.Checked = true;
+            }
+            else if (xemployee_status == "Widowed") {
+                rdo_Widowed.Checked = true;
+            }
 
         }
     }

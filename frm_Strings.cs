@@ -18,18 +18,13 @@ namespace LSTV_Desktop_App
             InitializeComponent();
         }
 
-        private void frm_Strings_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_stringreplace_Click(object sender, EventArgs e)
         {
 
             lstv_months.Items.Clear();
 
-            string xtobereplace = txt_stringreplace.Text;
-            xtobereplace.ToUpper();
+            string xtobereplace = txt_stringreplace.Text.ToUpper();
+            
             string xreplaced = Regex.Replace(xtobereplace , @"[^0-9a-zA-Z]+", " ");
 
 

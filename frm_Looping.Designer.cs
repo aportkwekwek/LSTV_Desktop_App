@@ -45,7 +45,7 @@ namespace LSTV_Desktop_App
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto Thin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 52);
+            this.label1.Location = new System.Drawing.Point(24, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 23);
             this.label1.TabIndex = 1;
@@ -53,6 +53,8 @@ namespace LSTV_Desktop_App
             // 
             // txtPalindrome
             // 
+            this.txtPalindrome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(233)))), ((int)(((byte)(12)))));
+            this.txtPalindrome.BorderRadius = 5;
             this.txtPalindrome.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPalindrome.DefaultText = "";
             this.txtPalindrome.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -68,7 +70,7 @@ namespace LSTV_Desktop_App
             this.txtPalindrome.Location = new System.Drawing.Point(43, 141);
             this.txtPalindrome.Name = "txtPalindrome";
             this.txtPalindrome.PasswordChar = '\0';
-            this.txtPalindrome.PlaceholderText = "";
+            this.txtPalindrome.PlaceholderText = "Start Palindrome";
             this.txtPalindrome.SelectedText = "";
             this.txtPalindrome.ShadowDecoration.Parent = this.txtPalindrome;
             this.txtPalindrome.Size = new System.Drawing.Size(348, 36);
@@ -86,12 +88,14 @@ namespace LSTV_Desktop_App
             // 
             // btn_forloop
             // 
+            this.btn_forloop.BorderRadius = 5;
             this.btn_forloop.CheckedState.Parent = this.btn_forloop;
             this.btn_forloop.CustomImages.Parent = this.btn_forloop;
+            this.btn_forloop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(196)))), ((int)(((byte)(62)))));
             this.btn_forloop.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_forloop.ForeColor = System.Drawing.Color.White;
             this.btn_forloop.HoverState.Parent = this.btn_forloop;
-            this.btn_forloop.Location = new System.Drawing.Point(43, 183);
+            this.btn_forloop.Location = new System.Drawing.Point(43, 190);
             this.btn_forloop.Name = "btn_forloop";
             this.btn_forloop.ShadowDecoration.Parent = this.btn_forloop;
             this.btn_forloop.Size = new System.Drawing.Size(112, 45);
@@ -101,12 +105,14 @@ namespace LSTV_Desktop_App
             // 
             // btn_whileloop
             // 
+            this.btn_whileloop.BorderRadius = 5;
             this.btn_whileloop.CheckedState.Parent = this.btn_whileloop;
             this.btn_whileloop.CustomImages.Parent = this.btn_whileloop;
+            this.btn_whileloop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(196)))), ((int)(((byte)(62)))));
             this.btn_whileloop.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_whileloop.ForeColor = System.Drawing.Color.White;
             this.btn_whileloop.HoverState.Parent = this.btn_whileloop;
-            this.btn_whileloop.Location = new System.Drawing.Point(161, 183);
+            this.btn_whileloop.Location = new System.Drawing.Point(161, 190);
             this.btn_whileloop.Name = "btn_whileloop";
             this.btn_whileloop.ShadowDecoration.Parent = this.btn_whileloop;
             this.btn_whileloop.Size = new System.Drawing.Size(112, 45);
@@ -116,12 +122,14 @@ namespace LSTV_Desktop_App
             // 
             // btn_foreachloop
             // 
+            this.btn_foreachloop.BorderRadius = 5;
             this.btn_foreachloop.CheckedState.Parent = this.btn_foreachloop;
             this.btn_foreachloop.CustomImages.Parent = this.btn_foreachloop;
+            this.btn_foreachloop.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(196)))), ((int)(((byte)(62)))));
             this.btn_foreachloop.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_foreachloop.ForeColor = System.Drawing.Color.White;
             this.btn_foreachloop.HoverState.Parent = this.btn_foreachloop;
-            this.btn_foreachloop.Location = new System.Drawing.Point(279, 183);
+            this.btn_foreachloop.Location = new System.Drawing.Point(279, 190);
             this.btn_foreachloop.Name = "btn_foreachloop";
             this.btn_foreachloop.ShadowDecoration.Parent = this.btn_foreachloop;
             this.btn_foreachloop.Size = new System.Drawing.Size(112, 45);
@@ -141,6 +149,8 @@ namespace LSTV_Desktop_App
             // 
             // txt_Pyramid
             // 
+            this.txt_Pyramid.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(233)))), ((int)(((byte)(12)))));
+            this.txt_Pyramid.BorderRadius = 5;
             this.txt_Pyramid.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Pyramid.DefaultText = "";
             this.txt_Pyramid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -156,7 +166,7 @@ namespace LSTV_Desktop_App
             this.txt_Pyramid.Location = new System.Drawing.Point(411, 140);
             this.txt_Pyramid.Name = "txt_Pyramid";
             this.txt_Pyramid.PasswordChar = '\0';
-            this.txt_Pyramid.PlaceholderText = "";
+            this.txt_Pyramid.PlaceholderText = "Pyramid Looping enter number here";
             this.txt_Pyramid.SelectedText = "";
             this.txt_Pyramid.ShadowDecoration.Parent = this.txt_Pyramid;
             this.txt_Pyramid.Size = new System.Drawing.Size(348, 36);
@@ -164,12 +174,14 @@ namespace LSTV_Desktop_App
             // 
             // btn_generatePyramid
             // 
+            this.btn_generatePyramid.BorderRadius = 5;
             this.btn_generatePyramid.CheckedState.Parent = this.btn_generatePyramid;
             this.btn_generatePyramid.CustomImages.Parent = this.btn_generatePyramid;
+            this.btn_generatePyramid.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(196)))), ((int)(((byte)(62)))));
             this.btn_generatePyramid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_generatePyramid.ForeColor = System.Drawing.Color.White;
             this.btn_generatePyramid.HoverState.Parent = this.btn_generatePyramid;
-            this.btn_generatePyramid.Location = new System.Drawing.Point(411, 182);
+            this.btn_generatePyramid.Location = new System.Drawing.Point(411, 189);
             this.btn_generatePyramid.Name = "btn_generatePyramid";
             this.btn_generatePyramid.ShadowDecoration.Parent = this.btn_generatePyramid;
             this.btn_generatePyramid.Size = new System.Drawing.Size(112, 45);
@@ -179,6 +191,9 @@ namespace LSTV_Desktop_App
             // 
             // txt_generatePyramid
             // 
+            this.txt_generatePyramid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_generatePyramid.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_generatePyramid.DefaultText = "";
             this.txt_generatePyramid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -191,20 +206,23 @@ namespace LSTV_Desktop_App
             this.txt_generatePyramid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_generatePyramid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txt_generatePyramid.HoverState.Parent = this.txt_generatePyramid;
-            this.txt_generatePyramid.Location = new System.Drawing.Point(43, 268);
+            this.txt_generatePyramid.Location = new System.Drawing.Point(0, 276);
             this.txt_generatePyramid.Multiline = true;
             this.txt_generatePyramid.Name = "txt_generatePyramid";
             this.txt_generatePyramid.PasswordChar = '\0';
             this.txt_generatePyramid.PlaceholderText = "";
+            this.txt_generatePyramid.ReadOnly = true;
             this.txt_generatePyramid.SelectedText = "";
             this.txt_generatePyramid.ShadowDecoration.Parent = this.txt_generatePyramid;
-            this.txt_generatePyramid.Size = new System.Drawing.Size(716, 171);
+            this.txt_generatePyramid.Size = new System.Drawing.Size(805, 197);
             this.txt_generatePyramid.TabIndex = 10;
             // 
             // frm_Looping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(805, 473);
             this.Controls.Add(this.txt_generatePyramid);
             this.Controls.Add(this.btn_generatePyramid);

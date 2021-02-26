@@ -17,11 +17,17 @@ namespace LSTV_Desktop_App
             InitializeComponent();
         }
 
+
         private void btn_forloop_Click(object sender, EventArgs e)
         {
-            string xpalindrome = txtPalindrome.Text;
+            string xpalindrome = txtPalindrome.Text.ToLower();
             string rev = "";
-            xpalindrome.ToLower();
+
+            if (xpalindrome == "") {
+                MessageBox.Show("Please insert something", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtPalindrome.Focus();
+                return;
+            }
 
             for (int i = xpalindrome.Length -1 ; i >= 0; i--)
             {
@@ -42,9 +48,14 @@ namespace LSTV_Desktop_App
 
         private void btn_whileloop_Click(object sender, EventArgs e)
         {
-            string xpalindrome = txtPalindrome.Text;
+            string xpalindrome = txtPalindrome.Text.ToLower();
             string rev = "";
-            xpalindrome.ToLower();
+
+            if (xpalindrome == "") {
+                MessageBox.Show("Please insert something", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtPalindrome.Focus();
+                return;
+            }
 
             int i = xpalindrome.Length - 1;
 
@@ -66,11 +77,17 @@ namespace LSTV_Desktop_App
 
         private void btn_foreachloop_Click(object sender, EventArgs e)
         {
-            string xpalindrome = txtPalindrome.Text;
+            string xpalindrome = txtPalindrome.Text.ToLower();
             string rev = "";
-            xpalindrome.ToLower();
 
-            foreach(char c in xpalindrome.Reverse())
+            if (xpalindrome == "")
+            {
+                MessageBox.Show("Please insert something" , "System Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                txtPalindrome.Focus();
+                return;
+            }
+
+            foreach (char c in xpalindrome.Reverse())
             {
                 rev += c;
             }
@@ -98,8 +115,18 @@ namespace LSTV_Desktop_App
                 return;
             }
 
+          
+
             try
             {
+
+                if (Int32.Parse(xpyramid) > 20)
+                {
+                    MessageBox.Show("Number is too large and might cause problem to your computer", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+
+                }
+
                 int n = Int32.Parse(xpyramid);
                 string newline = Environment.NewLine;
 
@@ -120,7 +147,7 @@ namespace LSTV_Desktop_App
             }
             catch {
 
-                MessageBox.Show("Unable to parse string to number");
+                MessageBox.Show("Unable to parse string to number", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;
             
             }

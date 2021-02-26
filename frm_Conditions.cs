@@ -23,7 +23,10 @@ namespace LSTV_Desktop_App
 
             try
             {
+                
+
                 int xevenoddint = Int32.Parse(xevenodd);
+                
                 int remainder = xevenoddint % 2;
                 if (remainder == 0) {
                     MessageBox.Show("Number is Even", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Information);

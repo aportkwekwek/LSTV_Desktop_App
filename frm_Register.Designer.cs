@@ -30,7 +30,6 @@ namespace LSTV_Desktop_App
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_back = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,6 +40,11 @@ namespace LSTV_Desktop_App
             this.txt_regpassconf = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_regname = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_Register = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_back = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
@@ -52,23 +56,6 @@ namespace LSTV_Desktop_App
             this.label1.Size = new System.Drawing.Size(99, 29);
             this.label1.TabIndex = 20;
             this.label1.Text = "Register";
-            // 
-            // btn_back
-            // 
-            this.btn_back.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btn_back.CheckedState.Parent = this.btn_back;
-            this.btn_back.HoverState.ImageSize = new System.Drawing.Size(25, 25);
-            this.btn_back.HoverState.Parent = this.btn_back;
-            this.btn_back.Image = global::LSTV_Desktop_App.Properties.Resources.back_arrow;
-            this.btn_back.ImageRotate = 0F;
-            this.btn_back.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_back.Location = new System.Drawing.Point(12, 22);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.PressedState.ImageSize = new System.Drawing.Size(27, 27);
-            this.btn_back.PressedState.Parent = this.btn_back;
-            this.btn_back.Size = new System.Drawing.Size(61, 47);
-            this.btn_back.TabIndex = 21;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // label2
             // 
@@ -234,7 +221,7 @@ namespace LSTV_Desktop_App
             this.txt_regname.MaxLength = 255;
             this.txt_regname.Name = "txt_regname";
             this.txt_regname.PasswordChar = '\0';
-            this.txt_regname.PlaceholderText = "juandelacruz";
+            this.txt_regname.PlaceholderText = "Juan dela Cruz";
             this.txt_regname.SelectedText = "";
             this.txt_regname.ShadowDecoration.Parent = this.txt_regname;
             this.txt_regname.Size = new System.Drawing.Size(257, 46);
@@ -256,6 +243,59 @@ namespace LSTV_Desktop_App
             this.btn_Register.Text = "Register";
             this.btn_Register.Click += new System.EventHandler(this.btn_Register_Click);
             // 
+            // btn_back
+            // 
+            this.btn_back.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btn_back.CheckedState.Parent = this.btn_back;
+            this.btn_back.HoverState.ImageSize = new System.Drawing.Size(25, 25);
+            this.btn_back.HoverState.Parent = this.btn_back;
+            this.btn_back.Image = global::LSTV_Desktop_App.Properties.Resources.back_arrow;
+            this.btn_back.ImageRotate = 0F;
+            this.btn_back.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_back.Location = new System.Drawing.Point(12, 22);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.PressedState.ImageSize = new System.Drawing.Size(27, 27);
+            this.btn_back.PressedState.Parent = this.btn_back;
+            this.btn_back.Size = new System.Drawing.Size(61, 47);
+            this.btn_back.TabIndex = 21;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(667, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(5, 465);
+            this.panel3.TabIndex = 22;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 465);
+            this.panel1.TabIndex = 23;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(5, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(662, 5);
+            this.panel4.TabIndex = 37;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(5, 460);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(662, 5);
+            this.panel2.TabIndex = 38;
+            // 
             // frm_Register
             // 
             this.AcceptButton = this.btn_Register;
@@ -263,6 +303,10 @@ namespace LSTV_Desktop_App
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(672, 465);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btn_Register);
             this.Controls.Add(this.txt_regname);
             this.Controls.Add(this.txt_regpassconf);
@@ -299,5 +343,9 @@ namespace LSTV_Desktop_App
         private Guna.UI2.WinForms.Guna2TextBox txt_regpassconf;
         private Guna.UI2.WinForms.Guna2TextBox txt_regname;
         private Guna.UI2.WinForms.Guna2Button btn_Register;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel2;
     }
 }
