@@ -29,6 +29,7 @@ namespace LSTV_Desktop_App
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dialog_editEmployee));
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,10 +57,10 @@ namespace LSTV_Desktop_App
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto Thin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Roboto", 15.75F);
             this.label2.Location = new System.Drawing.Point(86, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 29);
+            this.label2.Size = new System.Drawing.Size(144, 25);
             this.label2.TabIndex = 21;
             this.label2.Text = "Edit Employee";
             // 
@@ -218,6 +219,7 @@ namespace LSTV_Desktop_App
             // 
             // btn_editEmployee
             // 
+            this.btn_editEmployee.BorderRadius = 5;
             this.btn_editEmployee.CheckedState.Parent = this.btn_editEmployee;
             this.btn_editEmployee.CustomImages.Parent = this.btn_editEmployee;
             this.btn_editEmployee.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(196)))), ((int)(((byte)(62)))));
@@ -335,9 +337,9 @@ namespace LSTV_Desktop_App
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(728, 0);
+            this.panel1.Location = new System.Drawing.Point(731, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 457);
+            this.panel1.Size = new System.Drawing.Size(2, 457);
             this.panel1.TabIndex = 33;
             // 
             // panel2
@@ -346,25 +348,25 @@ namespace LSTV_Desktop_App
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(5, 457);
+            this.panel2.Size = new System.Drawing.Size(2, 457);
             this.panel2.TabIndex = 34;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(5, 452);
+            this.panel3.Location = new System.Drawing.Point(2, 455);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(723, 5);
+            this.panel3.Size = new System.Drawing.Size(729, 2);
             this.panel3.TabIndex = 35;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(5, 0);
+            this.panel4.Location = new System.Drawing.Point(2, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(723, 5);
+            this.panel4.Size = new System.Drawing.Size(729, 2);
             this.panel4.TabIndex = 36;
             // 
             // btn_back
@@ -408,6 +410,7 @@ namespace LSTV_Desktop_App
             this.Controls.Add(this.btn_back);
             this.Font = new System.Drawing.Font("Roboto Thin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "dialog_editEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using CryptSharp;
 using System.Diagnostics;
+using System.Management;
+using System.Security.Principal;
+using System.IO;
 
 namespace LSTV_Desktop_App
 {
@@ -41,6 +44,42 @@ namespace LSTV_Desktop_App
             this.Hide();
             Form xfrm_Register = new frm_Register();
             xfrm_Register.Show();
+
+
+            // Get Net users
+            //SelectQuery query = new SelectQuery("Win32_UserProfile");
+            //ManagementObjectSearcher searcher = new ManagementObjectSearcher(query);
+            //foreach (ManagementObject sid in searcher.Get()) {
+
+            //    MessageBox.Show(new SecurityIdentifier(sid["SID"].ToString()).Translate(typeof(NTAccount)).ToString()); ;
+            //}
+
+            // Get Net users using cmd
+
+            //Verbose cmd
+            //string cmdText = "net user";
+            //System.Diagnostics.Process.Start("CMD.exe", cmdText);
+
+            //Hidden Cmd
+            //System.Diagnostics.Process process = new System.Diagnostics.Process();
+            //process.StartInfo.FileName = "cmd.exe";
+            //process.StartInfo.Arguments = "/c ipconfig";
+            //process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            //process.StartInfo.UseShellExecute = false;
+            //process.StartInfo.RedirectStandardError = true;
+            //process.StartInfo.RedirectStandardInput = true;
+            //process.StartInfo.RedirectStandardOutput = true;
+            //process.Start();
+
+            //StreamReader streamReader = process.StandardOutput;
+            //string errorReader = process.StandardError.ReadToEnd();
+            //string line = streamReader.ReadLine();
+            //while (line != null) {
+            //    Console.WriteLine(line);
+            //    line = streamReader.ReadLine();
+            //}
+
+            //process.WaitForExit();
 
         }
 

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -107,14 +108,15 @@ namespace LSTV_Desktop_App
         
             if (xemployeeFullname == "")
             {
-                MessageBox.Show("Please enter employee fullname", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("Please enter employee full name", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txt_Fullname.Focus();
                 return;
             }
 
             if (cmb_Gender.SelectedItem == null)
             {
-                MessageBox.Show("Gender Not Selected", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("Gender not selected", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                cmb_Gender.DroppedDown = true;
                 return;
             }
 
@@ -247,41 +249,6 @@ namespace LSTV_Desktop_App
             }
         }
 
-        private void dgv_Names_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                if (dgv_Names.SelectedCells.Count > 0)
-                {
-                    var xcell_clicked = dgv_Names.SelectedCells[0];
-                    string xcell_empcode = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[1].Value.ToString();
-                    string xcell_empname = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[2].Value.ToString();
-                    string xcell_empbdate = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[3].Value.ToString();
-                    string xcell_status = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[4].Value.ToString();
-                    string xcell_gender = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[5].Value.ToString();
-                    string xcell_salary = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[6].Value.ToString();
-
-                    Employee.setEmployeeCode(xcell_empcode);
-                    Employee.setEmployeeFullName(xcell_empname);
-                    Employee.setEmployeeBday(xcell_empbdate);
-                    Employee.setEmployeeStatus(xcell_status);
-                    Employee.setEmployeeGender(xcell_gender);
-                    Employee.setEmployeeSalary(xcell_salary);
-
-                    dialog_editEmployee editEmployee = new dialog_editEmployee();
-                    editEmployee.ShowDialog();
-
-                    loadingData();
-
-                }
-
-            }
-            catch (Exception ex) {
-                MessageBox.Show(ex.ToString());
-            }
-           
-        }
-
         private void txtSearchEmployee_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (txtSearchEmployee.Text.Length > 2) {
@@ -313,6 +280,41 @@ namespace LSTV_Desktop_App
                     MessageBox.Show(ex.ToString());
                     return;
                 }
+            }
+        }
+
+        private void dgv_Names_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgv_Names.SelectedCells.Count > 0)
+                {
+                    var xcell_clicked = dgv_Names.SelectedCells[0];
+                    string xcell_empcode = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[1].Value.ToString();
+                    string xcell_empname = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[2].Value.ToString();
+                    string xcell_empbdate = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[3].Value.ToString();
+                    string xcell_status = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[4].Value.ToString();
+                    string xcell_gender = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[5].Value.ToString();
+                    string xcell_salary = dgv_Names.Rows[xcell_clicked.RowIndex].Cells[6].Value.ToString();
+
+                    Employee.setEmployeeCode(xcell_empcode);
+                    Employee.setEmployeeFullName(xcell_empname);
+                    Employee.setEmployeeBday(xcell_empbdate);
+                    Employee.setEmployeeStatus(xcell_status);
+                    Employee.setEmployeeGender(xcell_gender);
+                    Employee.setEmployeeSalary(xcell_salary);
+
+                    dialog_editEmployee editEmployee = new dialog_editEmployee();
+                    editEmployee.ShowDialog();
+
+                    loadingData();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }

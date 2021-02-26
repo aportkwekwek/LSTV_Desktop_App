@@ -35,7 +35,9 @@ namespace LSTV_Desktop_App
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtSearchEmployee = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.prbar_loader = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.dgv_Names = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_EmployeeCode = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,22 +57,20 @@ namespace LSTV_Desktop_App
             this.label6 = new System.Windows.Forms.Label();
             this.txt_Salary = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_CreateNewEmployee = new Guna.UI2.WinForms.Guna2Button();
-            this.prbar_loader = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.txtSearchEmployee = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.prbar_loader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Names)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prbar_loader)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Thin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F);
             this.label1.Location = new System.Drawing.Point(24, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 23);
+            this.label1.Size = new System.Drawing.Size(58, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "LINQ";
             // 
@@ -87,6 +87,34 @@ namespace LSTV_Desktop_App
             this.guna2Panel1.Size = new System.Drawing.Size(1082, 68);
             this.guna2Panel1.TabIndex = 2;
             // 
+            // txtSearchEmployee
+            // 
+            this.txtSearchEmployee.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(233)))), ((int)(((byte)(12)))));
+            this.txtSearchEmployee.BorderRadius = 5;
+            this.txtSearchEmployee.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchEmployee.DefaultText = "";
+            this.txtSearchEmployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchEmployee.DisabledState.Parent = this.txtSearchEmployee;
+            this.txtSearchEmployee.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchEmployee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchEmployee.FocusedState.Parent = this.txtSearchEmployee;
+            this.txtSearchEmployee.Font = new System.Drawing.Font("Roboto Thin", 10F);
+            this.txtSearchEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtSearchEmployee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchEmployee.HoverState.Parent = this.txtSearchEmployee;
+            this.txtSearchEmployee.IconRight = global::LSTV_Desktop_App.Properties.Resources.magnifying_glass;
+            this.txtSearchEmployee.Location = new System.Drawing.Point(827, 25);
+            this.txtSearchEmployee.Name = "txtSearchEmployee";
+            this.txtSearchEmployee.PasswordChar = '\0';
+            this.txtSearchEmployee.PlaceholderText = "Search Employee";
+            this.txtSearchEmployee.SelectedText = "";
+            this.txtSearchEmployee.ShadowDecoration.Parent = this.txtSearchEmployee;
+            this.txtSearchEmployee.Size = new System.Drawing.Size(243, 36);
+            this.txtSearchEmployee.TabIndex = 6;
+            this.txtSearchEmployee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchEmployee_KeyPress);
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.prbar_loader);
@@ -97,6 +125,21 @@ namespace LSTV_Desktop_App
             this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
             this.guna2Panel2.Size = new System.Drawing.Size(1082, 198);
             this.guna2Panel2.TabIndex = 3;
+            // 
+            // prbar_loader
+            // 
+            this.prbar_loader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.prbar_loader.Image = global::LSTV_Desktop_App.Properties.Resources.loadingtransparent;
+            this.prbar_loader.Location = new System.Drawing.Point(0, 0);
+            this.prbar_loader.Name = "prbar_loader";
+            this.prbar_loader.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.prbar_loader.ShadowDecoration.Parent = this.prbar_loader;
+            this.prbar_loader.Size = new System.Drawing.Size(1082, 198);
+            this.prbar_loader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.prbar_loader.TabIndex = 7;
+            this.prbar_loader.TabStop = false;
+            this.prbar_loader.UseTransparentBackground = true;
+            this.prbar_loader.Visible = false;
             // 
             // dgv_Names
             // 
@@ -157,7 +200,7 @@ namespace LSTV_Desktop_App
             this.dgv_Names.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_Names.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(201)))), ((int)(((byte)(138)))));
             this.dgv_Names.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgv_Names.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Names_CellContentDoubleClick);
+            this.dgv_Names.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Names_CellContentClick);
             // 
             // label2
             // 
@@ -468,49 +511,6 @@ namespace LSTV_Desktop_App
             this.btn_CreateNewEmployee.Text = "Create New Employee";
             this.btn_CreateNewEmployee.Click += new System.EventHandler(this.btn_CreateNewEmployee_Click);
             // 
-            // prbar_loader
-            // 
-            this.prbar_loader.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.prbar_loader.Image = global::LSTV_Desktop_App.Properties.Resources.loadingtransparent;
-            this.prbar_loader.Location = new System.Drawing.Point(0, 0);
-            this.prbar_loader.Name = "prbar_loader";
-            this.prbar_loader.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.prbar_loader.ShadowDecoration.Parent = this.prbar_loader;
-            this.prbar_loader.Size = new System.Drawing.Size(1082, 198);
-            this.prbar_loader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.prbar_loader.TabIndex = 7;
-            this.prbar_loader.TabStop = false;
-            this.prbar_loader.UseTransparentBackground = true;
-            this.prbar_loader.Visible = false;
-            // 
-            // txtSearchEmployee
-            // 
-            this.txtSearchEmployee.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(233)))), ((int)(((byte)(12)))));
-            this.txtSearchEmployee.BorderRadius = 5;
-            this.txtSearchEmployee.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchEmployee.DefaultText = "";
-            this.txtSearchEmployee.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchEmployee.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchEmployee.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchEmployee.DisabledState.Parent = this.txtSearchEmployee;
-            this.txtSearchEmployee.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchEmployee.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchEmployee.FocusedState.Parent = this.txtSearchEmployee;
-            this.txtSearchEmployee.Font = new System.Drawing.Font("Roboto Thin", 10F);
-            this.txtSearchEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.txtSearchEmployee.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchEmployee.HoverState.Parent = this.txtSearchEmployee;
-            this.txtSearchEmployee.IconRight = global::LSTV_Desktop_App.Properties.Resources.magnifying_glass;
-            this.txtSearchEmployee.Location = new System.Drawing.Point(827, 25);
-            this.txtSearchEmployee.Name = "txtSearchEmployee";
-            this.txtSearchEmployee.PasswordChar = '\0';
-            this.txtSearchEmployee.PlaceholderText = "Search Employee";
-            this.txtSearchEmployee.SelectedText = "";
-            this.txtSearchEmployee.ShadowDecoration.Parent = this.txtSearchEmployee;
-            this.txtSearchEmployee.Size = new System.Drawing.Size(243, 36);
-            this.txtSearchEmployee.TabIndex = 6;
-            this.txtSearchEmployee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchEmployee_KeyPress);
-            // 
             // frm_Linq
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -539,10 +539,10 @@ namespace LSTV_Desktop_App
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.prbar_loader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Names)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.prbar_loader)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

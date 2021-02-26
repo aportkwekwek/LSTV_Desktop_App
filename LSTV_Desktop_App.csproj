@@ -4,6 +4,11 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net472</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>Assets\Icons\logo_head.ico</ApplicationIcon>
+    <StartupObject>LSTV_Desktop_App.Program</StartupObject>
+    <Authors>Ron Erick D. Rodriguez</Authors>
+    <Company>Lee Systems Technology Ventures Inc</Company>
+    <Description>Programming Training for C-sharp pl</Description>
   </PropertyGroup>
 
   <ItemGroup>

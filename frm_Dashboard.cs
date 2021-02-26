@@ -42,7 +42,7 @@ namespace LSTV_Desktop_App
 
         private void frm_Dashboard_Load(object sender, EventArgs e)
         {
-
+            prbar_loader.Visible = true;
             timer1.Start();
             showDashboard();
         }

@@ -37,23 +37,23 @@ namespace LSTV_Desktop_App
             this.txt_fullname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_publicipaddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.lbl_activefetchers = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_inactivefetchers = new System.Windows.Forms.Label();
-            this.lbl_numberofstudents = new System.Windows.Forms.Label();
-            this.lbl_totalcost = new System.Windows.Forms.Label();
-            this.lbl_totalsales = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lbl_totalemployee = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lbl_totalsales = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel5 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lbl_numberofstudents = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel6 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lbl_totalcost = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GradientPanel2.SuspendLayout();
             this.guna2GradientPanel3.SuspendLayout();
@@ -65,10 +65,10 @@ namespace LSTV_Desktop_App
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Thin", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 23);
+            this.label1.Size = new System.Drawing.Size(114, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dashboard";
             // 
@@ -185,6 +185,10 @@ namespace LSTV_Desktop_App
             // 
             // guna2GradientPanel1
             // 
+            this.guna2GradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel1.AutoSize = true;
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.White;
             this.guna2GradientPanel1.Controls.Add(this.lbl_activefetchers);
             this.guna2GradientPanel1.Controls.Add(this.label4);
@@ -197,224 +201,253 @@ namespace LSTV_Desktop_App
             this.guna2GradientPanel1.Size = new System.Drawing.Size(313, 174);
             this.guna2GradientPanel1.TabIndex = 10;
             // 
+            // lbl_activefetchers
+            // 
+            this.lbl_activefetchers.AutoSize = true;
+            this.lbl_activefetchers.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_activefetchers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_activefetchers.Font = new System.Drawing.Font("Roboto", 90F, System.Drawing.FontStyle.Bold);
+            this.lbl_activefetchers.ForeColor = System.Drawing.Color.White;
+            this.lbl_activefetchers.Location = new System.Drawing.Point(0, 0);
+            this.lbl_activefetchers.Name = "lbl_activefetchers";
+            this.lbl_activefetchers.Size = new System.Drawing.Size(194, 144);
+            this.lbl_activefetchers.TabIndex = 4;
+            this.lbl_activefetchers.Text = "20";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(0, 149);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(286, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Number of Active Fetchers";
+            // 
             // guna2GradientPanel2
             // 
+            this.guna2GradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel2.AutoSize = true;
             this.guna2GradientPanel2.BackColor = System.Drawing.Color.White;
             this.guna2GradientPanel2.Controls.Add(this.lbl_inactivefetchers);
             this.guna2GradientPanel2.Controls.Add(this.label6);
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(235)))), ((int)(((byte)(82)))));
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(255)))), ((int)(((byte)(203)))));
             this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(388, 102);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(384, 102);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.ShadowDecoration.Parent = this.guna2GradientPanel2;
             this.guna2GradientPanel2.Size = new System.Drawing.Size(313, 174);
             this.guna2GradientPanel2.TabIndex = 11;
             // 
+            // lbl_inactivefetchers
+            // 
+            this.lbl_inactivefetchers.AutoSize = true;
+            this.lbl_inactivefetchers.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_inactivefetchers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_inactivefetchers.Font = new System.Drawing.Font("Roboto", 90F, System.Drawing.FontStyle.Bold);
+            this.lbl_inactivefetchers.ForeColor = System.Drawing.Color.White;
+            this.lbl_inactivefetchers.Location = new System.Drawing.Point(0, 0);
+            this.lbl_inactivefetchers.Name = "lbl_inactivefetchers";
+            this.lbl_inactivefetchers.Size = new System.Drawing.Size(194, 144);
+            this.lbl_inactivefetchers.TabIndex = 5;
+            this.lbl_inactivefetchers.Text = "20";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(0, 149);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(303, 25);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Number of Inactive Fetchers";
+            // 
             // guna2GradientPanel3
             // 
+            this.guna2GradientPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel3.AutoSize = true;
             this.guna2GradientPanel3.BackColor = System.Drawing.Color.White;
             this.guna2GradientPanel3.Controls.Add(this.lbl_totalemployee);
             this.guna2GradientPanel3.Controls.Add(this.label8);
             this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(235)))), ((int)(((byte)(82)))));
             this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(179)))), ((int)(((byte)(135)))));
             this.guna2GradientPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel3.Location = new System.Drawing.Point(28, 298);
+            this.guna2GradientPanel3.Location = new System.Drawing.Point(28, 336);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.ShadowDecoration.Parent = this.guna2GradientPanel3;
             this.guna2GradientPanel3.Size = new System.Drawing.Size(313, 174);
             this.guna2GradientPanel3.TabIndex = 12;
             // 
+            // lbl_totalemployee
+            // 
+            this.lbl_totalemployee.AutoSize = true;
+            this.lbl_totalemployee.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_totalemployee.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_totalemployee.Font = new System.Drawing.Font("Roboto", 90F, System.Drawing.FontStyle.Bold);
+            this.lbl_totalemployee.ForeColor = System.Drawing.Color.White;
+            this.lbl_totalemployee.Location = new System.Drawing.Point(0, 0);
+            this.lbl_totalemployee.Name = "lbl_totalemployee";
+            this.lbl_totalemployee.Size = new System.Drawing.Size(194, 144);
+            this.lbl_totalemployee.TabIndex = 5;
+            this.lbl_totalemployee.Text = "20";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(0, 149);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(295, 25);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Total Number of Employees";
+            // 
             // guna2GradientPanel4
             // 
+            this.guna2GradientPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel4.AutoSize = true;
             this.guna2GradientPanel4.BackColor = System.Drawing.Color.White;
             this.guna2GradientPanel4.Controls.Add(this.lbl_totalsales);
             this.guna2GradientPanel4.Controls.Add(this.label9);
             this.guna2GradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(235)))), ((int)(((byte)(82)))));
             this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(255)))), ((int)(((byte)(203)))));
             this.guna2GradientPanel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(388, 298);
+            this.guna2GradientPanel4.Location = new System.Drawing.Point(384, 336);
             this.guna2GradientPanel4.Name = "guna2GradientPanel4";
             this.guna2GradientPanel4.ShadowDecoration.Parent = this.guna2GradientPanel4;
             this.guna2GradientPanel4.Size = new System.Drawing.Size(313, 174);
             this.guna2GradientPanel4.TabIndex = 13;
             // 
-            // guna2GradientPanel5
-            // 
-            this.guna2GradientPanel5.BackColor = System.Drawing.Color.White;
-            this.guna2GradientPanel5.Controls.Add(this.lbl_numberofstudents);
-            this.guna2GradientPanel5.Controls.Add(this.label7);
-            this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(235)))), ((int)(((byte)(82)))));
-            this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(179)))), ((int)(((byte)(135)))));
-            this.guna2GradientPanel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.guna2GradientPanel5.Location = new System.Drawing.Point(754, 102);
-            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
-            this.guna2GradientPanel5.ShadowDecoration.Parent = this.guna2GradientPanel5;
-            this.guna2GradientPanel5.Size = new System.Drawing.Size(313, 174);
-            this.guna2GradientPanel5.TabIndex = 14;
-            // 
-            // guna2GradientPanel6
-            // 
-            this.guna2GradientPanel6.BackColor = System.Drawing.Color.White;
-            this.guna2GradientPanel6.Controls.Add(this.lbl_totalcost);
-            this.guna2GradientPanel6.Controls.Add(this.label10);
-            this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(235)))), ((int)(((byte)(82)))));
-            this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(179)))), ((int)(((byte)(135)))));
-            this.guna2GradientPanel6.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.guna2GradientPanel6.Location = new System.Drawing.Point(754, 298);
-            this.guna2GradientPanel6.Name = "guna2GradientPanel6";
-            this.guna2GradientPanel6.ShadowDecoration.Parent = this.guna2GradientPanel6;
-            this.guna2GradientPanel6.Size = new System.Drawing.Size(313, 174);
-            this.guna2GradientPanel6.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(8, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(286, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Number of Active Fetchers";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(7, 142);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(303, 25);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Number of Inactive Fetchers";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(16, 140);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(276, 25);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Total Number of Students";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(8, 135);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(295, 25);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Total Number of Employees";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(20, 135);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 25);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Total Sales";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(27, 136);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(118, 25);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Total Cost";
-            // 
-            // lbl_activefetchers
-            // 
-            this.lbl_activefetchers.AutoSize = true;
-            this.lbl_activefetchers.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_activefetchers.Font = new System.Drawing.Font("Roboto", 70F, System.Drawing.FontStyle.Bold);
-            this.lbl_activefetchers.ForeColor = System.Drawing.Color.White;
-            this.lbl_activefetchers.Location = new System.Drawing.Point(140, 15);
-            this.lbl_activefetchers.Name = "lbl_activefetchers";
-            this.lbl_activefetchers.Size = new System.Drawing.Size(154, 113);
-            this.lbl_activefetchers.TabIndex = 4;
-            this.lbl_activefetchers.Text = "20";
-            // 
-            // lbl_inactivefetchers
-            // 
-            this.lbl_inactivefetchers.AutoSize = true;
-            this.lbl_inactivefetchers.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_inactivefetchers.Font = new System.Drawing.Font("Roboto", 70F, System.Drawing.FontStyle.Bold);
-            this.lbl_inactivefetchers.ForeColor = System.Drawing.Color.White;
-            this.lbl_inactivefetchers.Location = new System.Drawing.Point(139, 15);
-            this.lbl_inactivefetchers.Name = "lbl_inactivefetchers";
-            this.lbl_inactivefetchers.Size = new System.Drawing.Size(154, 113);
-            this.lbl_inactivefetchers.TabIndex = 5;
-            this.lbl_inactivefetchers.Text = "20";
-            // 
-            // lbl_numberofstudents
-            // 
-            this.lbl_numberofstudents.AutoSize = true;
-            this.lbl_numberofstudents.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_numberofstudents.Font = new System.Drawing.Font("Roboto", 70F, System.Drawing.FontStyle.Bold);
-            this.lbl_numberofstudents.ForeColor = System.Drawing.Color.White;
-            this.lbl_numberofstudents.Location = new System.Drawing.Point(147, 15);
-            this.lbl_numberofstudents.Name = "lbl_numberofstudents";
-            this.lbl_numberofstudents.Size = new System.Drawing.Size(154, 113);
-            this.lbl_numberofstudents.TabIndex = 5;
-            this.lbl_numberofstudents.Text = "25";
-            // 
-            // lbl_totalcost
-            // 
-            this.lbl_totalcost.AutoSize = true;
-            this.lbl_totalcost.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_totalcost.Font = new System.Drawing.Font("Roboto", 40F, System.Drawing.FontStyle.Bold);
-            this.lbl_totalcost.ForeColor = System.Drawing.Color.White;
-            this.lbl_totalcost.Location = new System.Drawing.Point(17, 55);
-            this.lbl_totalcost.Name = "lbl_totalcost";
-            this.lbl_totalcost.Size = new System.Drawing.Size(43, 65);
-            this.lbl_totalcost.TabIndex = 6;
-            this.lbl_totalcost.Text = ".";
-            this.lbl_totalcost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbl_totalsales
             // 
-            this.lbl_totalsales.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_totalsales.AutoSize = true;
             this.lbl_totalsales.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_totalsales.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_totalsales.Font = new System.Drawing.Font("Roboto", 50F, System.Drawing.FontStyle.Bold);
             this.lbl_totalsales.ForeColor = System.Drawing.Color.White;
-            this.lbl_totalsales.Location = new System.Drawing.Point(-9, 43);
+            this.lbl_totalsales.Location = new System.Drawing.Point(0, 0);
             this.lbl_totalsales.Name = "lbl_totalsales";
             this.lbl_totalsales.Size = new System.Drawing.Size(53, 81);
             this.lbl_totalsales.TabIndex = 6;
             this.lbl_totalsales.Text = ".";
             this.lbl_totalsales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_totalemployee
+            // label9
             // 
-            this.lbl_totalemployee.AutoSize = true;
-            this.lbl_totalemployee.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_totalemployee.Font = new System.Drawing.Font("Roboto", 70F, System.Drawing.FontStyle.Bold);
-            this.lbl_totalemployee.ForeColor = System.Drawing.Color.White;
-            this.lbl_totalemployee.Location = new System.Drawing.Point(140, 13);
-            this.lbl_totalemployee.Name = "lbl_totalemployee";
-            this.lbl_totalemployee.Size = new System.Drawing.Size(154, 113);
-            this.lbl_totalemployee.TabIndex = 5;
-            this.lbl_totalemployee.Text = "20";
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(0, 149);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(125, 25);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Total Sales";
+            // 
+            // guna2GradientPanel5
+            // 
+            this.guna2GradientPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel5.AutoSize = true;
+            this.guna2GradientPanel5.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel5.Controls.Add(this.lbl_numberofstudents);
+            this.guna2GradientPanel5.Controls.Add(this.label7);
+            this.guna2GradientPanel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(235)))), ((int)(((byte)(82)))));
+            this.guna2GradientPanel5.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(179)))), ((int)(((byte)(135)))));
+            this.guna2GradientPanel5.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.guna2GradientPanel5.Location = new System.Drawing.Point(748, 102);
+            this.guna2GradientPanel5.Name = "guna2GradientPanel5";
+            this.guna2GradientPanel5.ShadowDecoration.Parent = this.guna2GradientPanel5;
+            this.guna2GradientPanel5.Size = new System.Drawing.Size(313, 174);
+            this.guna2GradientPanel5.TabIndex = 14;
+            // 
+            // lbl_numberofstudents
+            // 
+            this.lbl_numberofstudents.AutoSize = true;
+            this.lbl_numberofstudents.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_numberofstudents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_numberofstudents.Font = new System.Drawing.Font("Roboto", 90F, System.Drawing.FontStyle.Bold);
+            this.lbl_numberofstudents.ForeColor = System.Drawing.Color.White;
+            this.lbl_numberofstudents.Location = new System.Drawing.Point(0, 0);
+            this.lbl_numberofstudents.Name = "lbl_numberofstudents";
+            this.lbl_numberofstudents.Size = new System.Drawing.Size(194, 144);
+            this.lbl_numberofstudents.TabIndex = 5;
+            this.lbl_numberofstudents.Text = "25";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(0, 149);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(276, 25);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Total Number of Students";
+            // 
+            // guna2GradientPanel6
+            // 
+            this.guna2GradientPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2GradientPanel6.AutoSize = true;
+            this.guna2GradientPanel6.BackColor = System.Drawing.Color.White;
+            this.guna2GradientPanel6.Controls.Add(this.lbl_totalcost);
+            this.guna2GradientPanel6.Controls.Add(this.label10);
+            this.guna2GradientPanel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(235)))), ((int)(((byte)(82)))));
+            this.guna2GradientPanel6.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(179)))), ((int)(((byte)(135)))));
+            this.guna2GradientPanel6.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.guna2GradientPanel6.Location = new System.Drawing.Point(748, 336);
+            this.guna2GradientPanel6.Name = "guna2GradientPanel6";
+            this.guna2GradientPanel6.ShadowDecoration.Parent = this.guna2GradientPanel6;
+            this.guna2GradientPanel6.Size = new System.Drawing.Size(313, 174);
+            this.guna2GradientPanel6.TabIndex = 11;
+            // 
+            // lbl_totalcost
+            // 
+            this.lbl_totalcost.AutoSize = true;
+            this.lbl_totalcost.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_totalcost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_totalcost.Font = new System.Drawing.Font("Roboto", 40F, System.Drawing.FontStyle.Bold);
+            this.lbl_totalcost.ForeColor = System.Drawing.Color.White;
+            this.lbl_totalcost.Location = new System.Drawing.Point(0, 0);
+            this.lbl_totalcost.Name = "lbl_totalcost";
+            this.lbl_totalcost.Size = new System.Drawing.Size(43, 65);
+            this.lbl_totalcost.TabIndex = 6;
+            this.lbl_totalcost.Text = ".";
+            this.lbl_totalcost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(0, 149);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(118, 25);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Total Cost";
             // 
             // frm_MainDashboard
             // 

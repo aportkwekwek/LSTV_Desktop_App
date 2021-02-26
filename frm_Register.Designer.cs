@@ -29,6 +29,7 @@ namespace LSTV_Desktop_App
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Register));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,10 +51,10 @@ namespace LSTV_Desktop_App
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Thin", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Roboto", 15.75F);
             this.label1.Location = new System.Drawing.Point(72, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 29);
+            this.label1.Size = new System.Drawing.Size(89, 25);
             this.label1.TabIndex = 20;
             this.label1.Text = "Register";
             // 
@@ -264,9 +265,9 @@ namespace LSTV_Desktop_App
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(667, 0);
+            this.panel3.Location = new System.Drawing.Point(670, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 465);
+            this.panel3.Size = new System.Drawing.Size(2, 465);
             this.panel3.TabIndex = 22;
             // 
             // panel1
@@ -275,25 +276,25 @@ namespace LSTV_Desktop_App
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 465);
+            this.panel1.Size = new System.Drawing.Size(2, 465);
             this.panel1.TabIndex = 23;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(5, 0);
+            this.panel4.Location = new System.Drawing.Point(2, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(662, 5);
+            this.panel4.Size = new System.Drawing.Size(668, 2);
             this.panel4.TabIndex = 37;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(146)))), ((int)(((byte)(0)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(5, 460);
+            this.panel2.Location = new System.Drawing.Point(2, 463);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(662, 5);
+            this.panel2.Size = new System.Drawing.Size(668, 2);
             this.panel2.TabIndex = 38;
             // 
             // frm_Register
@@ -320,6 +321,7 @@ namespace LSTV_Desktop_App
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
